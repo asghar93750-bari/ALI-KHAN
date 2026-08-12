@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+	int n{};
+	int result = 0;
+	int sum;
+	cin >> n;
+	vector<int> arr(n);
+	//for taking array.
+	for (int i = 0;i < n;i++) {
+		cin >> arr[i];
+	}
+	//for max.
+	int max = arr[0];
+
+	for (int i = 0;i < n;i++) {
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+	}
+	//for final result.
+	for (int i = 0;i < n;i++) {
+		sum = max - arr[i];
+		result = sum + result;
+	}
+	cout << result;
+	return 0;
+};
